@@ -37,7 +37,6 @@ Target "Test" (fun _ ->
     !! (testDir @@ "\CSharpx.Tests.dll")
       |> xUnit2 (fun p -> {p with HtmlOutputPath = Some(testDir @@ "xunit.html")})
 )
-*)
 
 // Dependencies
 "Clean"
