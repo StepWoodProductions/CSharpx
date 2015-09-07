@@ -25,7 +25,7 @@ Target "BuildLib" (fun _ ->
         |> Log "LibBuild-Output: "
 )
 
-(*
+
 Target "BuildTest" (fun _ ->
     !! "tests/CSharpx.Tests/CSharpx.Tests.csproj"
         |> MSBuildDebug testDir "Build"
@@ -42,8 +42,8 @@ Target "Test" (fun _ ->
 // Dependencies
 "Clean"
     ==> "BuildLib"
-    //==> "BuildTest"
-    //==> "Test"
+    ==> "BuildTest"
+    ==> "Test"
     ==> "Default"
 
 RunTargetOrDefault "Default"
